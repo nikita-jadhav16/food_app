@@ -1,0 +1,18 @@
+import React from "react";
+import FoodItem from "./FoodItem";
+
+const FoodList = ({ foodData, setFoodData }) => {
+  console.log("food data in food list component", foodData);
+
+  return (
+    <>
+      <p>all food data is here</p>
+
+      {foodData.map((food) => (
+        <FoodItem key={food.id} food={food} />
+      ))}
+    </>
+  );
+};
+
+export default FoodList;
