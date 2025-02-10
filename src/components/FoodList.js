@@ -1,5 +1,6 @@
 import React from "react";
 import FoodItem from "./FoodItem";
+import styles from "./foodList.module.css";
 
 const FoodList = ({ foodData, setFoodData }) => {
   console.log("food data in food list component", foodData);
@@ -8,9 +9,11 @@ const FoodList = ({ foodData, setFoodData }) => {
     <>
       <p>all food data is here</p>
 
-      {foodData.map((food) => (
-        <FoodItem key={food.id} food={food} />
-      ))}
+      <div className={styles.cardContainer}>
+        {foodData.map((food) => (
+          <FoodItem key={food.id} food={food} />
+        ))}
+      </div>
     </>
   );
 };
