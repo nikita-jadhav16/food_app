@@ -1,17 +1,18 @@
-// import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import AllFood from "./pages/AllFood";
-// import Search from "./components/Search";
-// import FoodList from "./components/FoodList";
+import FoodDetails from "./pages/FoodDetails";
 
 function App() {
-  // const [foodData, setFoodData] = useState([]);
   return (
     <>
       <Nav />
-      <AllFood />
-      {/* <Search foodData={foodData} setFoodData={setFoodData} />
-      <FoodList foodData={foodData} setFoodData={setFoodData} /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AllFood />} />
+          <Route path="/food-details" element={<FoodDetails />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
