@@ -1,15 +1,17 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Nav from "./components/Nav";
-import Search from "./components/Search";
-import FoodList from "./components/FoodList";
+import AllFood from "./pages/AllFood";
+// import Search from "./components/Search";
+// import FoodList from "./components/FoodList";
 
 function App() {
-  const [foodData, setFoodData] = useState([]);
+  // const [foodData, setFoodData] = useState([]);
   return (
     <>
       <Nav />
-      <Search foodData={foodData} setFoodData={setFoodData} />
-      <FoodList foodData={foodData} setFoodData={setFoodData} />
+      <AllFood />
+      {/* <Search foodData={foodData} setFoodData={setFoodData} />
+      <FoodList foodData={foodData} setFoodData={setFoodData} /> */}
     </>
   );
 }

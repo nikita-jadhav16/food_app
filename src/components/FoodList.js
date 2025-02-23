@@ -7,8 +7,6 @@ const FoodList = ({ foodData, setFoodData }) => {
 
   return (
     <>
-      <p>all food data is here</p>
-
       <div className={styles.cardContainer}>
         {foodData.map((food) => (
           <FoodItem key={food.id} food={food} />

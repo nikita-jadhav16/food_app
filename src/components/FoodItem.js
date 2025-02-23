@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./foodItem.module.css";
+import ItemDetails from "./ItemDetails";
 
 const FoodItem = ({ food }) => {
   const API = "https://api.spoonacular.com/recipes/";
@@ -10,7 +11,8 @@ const FoodItem = ({ food }) => {
 
     const foodRecipe = await fetch(`${API}${food.id}/${TYPE}`);
     const foodRecipeData = await foodRecipe.json();
-    console.log("recipe ===========>", foodRecipeData);
+    // console.log("recipe ===========>", foodRecipeData);
+    return <ItemDetails />;
   };
 
   return (
