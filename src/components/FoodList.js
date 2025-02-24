@@ -3,7 +3,7 @@ import FoodItem from "./FoodItem";
 import styles from "./foodList.module.css";
 
 const FoodList = ({ foodData, setFoodData }) => {
-  console.log("food data in food list component", foodData);
+  // console.log("food data in food list component", foodData);
 
   return (
     <>

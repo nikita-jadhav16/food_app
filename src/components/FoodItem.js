@@ -1,18 +1,20 @@
 import React from "react";
 import styles from "./foodItem.module.css";
-import ItemDetails from "./ItemDetails";
+import { useNavigate } from "react-router-dom";
 
 const FoodItem = ({ food }) => {
-  const API = "https://api.spoonacular.com/recipes/";
-  const TYPE = "card";
-  const handleClick = async (food) => {
-    console.log("food id", food);
-    // const foodID = Number(food.id)
+  const navigate = useNavigate();
 
-    const foodRecipe = await fetch(`${API}${food.id}/${TYPE}`);
-    const foodRecipeData = await foodRecipe.json();
-    // console.log("recipe ===========>", foodRecipeData);
-    return <ItemDetails />;
+  const handleClick = (food) => {
+    const id = Number(food.id);
+    console.log(id);
+
+    navigate(`/food-details/${id}`);
+    // console.log("food id", food);
+    // // const foodID = Number(food.id)
+    // const foodRecipe = await fetch(`${API}${food.id}/${TYPE}`);
+    // const foodRecipeData = await foodRecipe.json();
+    // // console.log("recipe ===========>", foodRecipeData);
   };
 
   return (
